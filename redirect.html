@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="web_blank" name="shell-type"/>
   <style>
     @layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
-    tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-background":"#e5e1e4","on-surface-variant":"#cec7ab","surface-container-lowest":"#0e0e10","tertiary":"#fbffff","secondary-container":"#45464e","outline-variant":"#4b4732","tertiary-fixed":"#42f9ff","surface-tint":"#e0c700","primary-container":"#fde216","primary-fixed":"#fee319","tertiary-container":"#30f9ff","surface-variant":"#353437","secondary":"#c6c6cf","inverse-on-surface":"#313032","surface-container-highest":"#353437","outline":"#979178","secondary-fixed-dim":"#c6c6cf","on-primary-fixed-variant":"#514700","on-secondary-fixed-variant":"#45464e","secondary-fixed":"#e2e1eb","on-surface":"#e5e1e4","on-secondary-container":"#b4b4bd","surface":"#131315","on-tertiary":"#003738","on-primary":"#383100","background":"#131315","surface-container-low":"#1c1b1d","on-tertiary-fixed-variant":"#004f52","primary-fixed-dim":"#e0c700","surface-container":"#201f21","surface-bright":"#39393b","on-error-container":"#ffdad6","tertiary-fixed-dim":"#00dce2","on-error":"#690005","inverse-primary":"#6b5f00","surface-dim":"#131315","surface-container-high":"#2a2a2c","on-secondary":"#2f3037","primary":"#fffdff","error":"#ffb4ab","on-primary-fixed":"#201c00","on-secondary-fixed":"#1a1b22","on-tertiary-container":"#006f72","on-primary-container":"#716400","error-container":"#93000a","on-tertiary-fixed":"#002021","inverse-surface":"#e5e1e4"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"gutter-desktop":"1.5rem","margin-desktop":"3rem","space-xs":"0.25rem","margin":"1rem","space-lg":"1.5rem","margin-tablet":"2rem","gutter":"1rem","space-sm":"0.5rem","space-xl":"2.5rem","space-md":"1rem"},"fontFamily":{"headline-md":["Inter"],"headline-lg":["Inter"],"display-hero-mobile":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"label-tactical":["Inter"],"display-hero":["Inter"],"body-md":["Inter"],"label-caps":["Inter"],"headline-sm":["Inter"]},"fontSize":{"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"label-tactical":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}]}}}};
+    tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-background":"#e5e1e4","on-surface-variant":"#cec7ab","surface-container-lowest":"#0e0e10","tertiary":"#fbffff","secondary-container":"#45464e","outline-variant":"#4b4732","tertiary-fixed":"#42f9ff","surface-tint":"#e0c700","primary-container":"#fde216","primary-fixed":"#fee319","tertiary-container":"#30f9ff","surface-variant":"#353437","secondary":"#c6c6cf","inverse-on-surface":"#313032","surface-container-highest":"#353437","outline":"#979178","secondary-fixed-dim":"#c6c6cf","on-primary-fixed-variant":"#514700","on-secondary-fixed-variant":"#45464e","secondary-fixed":"#e2e1eb","on-surface":"#e5e1e4","on-secondary-container":"#b4b4bd","surface":"#131315","on-tertiary":"#003738","on-primary":"#383100","background":"#131315","surface-container-low":"#1c1b1d","on-tertiary-fixed-variant":"#004f52","primary-fixed-dim":"#e0c700","surface-container":"#201f21","surface-bright":"#39393b","on-error-container":"#ffdad6","tertiary-fixed-dim":"#00dce2","on-error":"#690005","inverse-primary":"#6b5f00","surface-dim":"#131315","surface-container-high":"#2a2a2c","on-secondary":"#2f3037","primary":"#fffdff","error":"#ffb4ab","on-primary-fixed":"#201c00","on-secondary-fixed":"#1a1b22","on-tertiary-container":"#006f72","on-primary-container":"#716400","error-container":"#93000a","on-tertiary-fixed":"#002021","inverse-surface":"#e5e1e4"},"borderRadius":{"DEFAULT":"1rem"},"fontFamily":{"body-md":["Inter"]},"fontSize":{"body-md":["14px",{"lineHeight":"22px"}]}}}};
   </script>
 </head>
 <body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
   <main class="w-full min-h-screen bg-surface flex items-center justify-center">
     <div class="flex flex-col w-full relative min-h-screen items-center justify-center p-4 sm:p-6 overflow-hidden">
+      <!-- Background & Scrims -->
       <div class="absolute inset-0 z-0">
         <div class="w-full h-full bg-cover bg-center scale-105 filter brightness-75 contrast-125" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDv3awt_7ervswSiSNCDe9YB7CCIpnWZ0P-1gCaj8EFwmYWXLNY3RR-xyKddMh98wGKOvOURVIixc9E7TU821BEleswjW0vKTD3WnY2NQcYJ20kZcowovdllEXqoc2wj2yHfYO2CmQaia3cxPBwNtWN6Q_xy8ySKsI5rl1Czy5kIwSXuXUS71KXn7WnXHAkbMQzGOQdGlaLxu7L9yRGnIFdJsJOyy01cJTO0NPfIYYimi9ICygTR_2O50N1BlFi5boq');"></div>
         <div class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-xl"></div>
@@ -25,25 +24,23 @@
       </div>
 
       <div class="relative z-10 w-full max-w-lg mx-auto bg-surface-container-low/95 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-2xl">
+        
         <div class="flex items-center justify-between border-b border-surface-container-high/60 pb-5 mb-6">
           <div class="flex items-center space-x-3">
             <div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center p-1.5 border border-surface-container-high">
-              <img alt="Los Angeles Roleplay" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq5PjVd3OyVPNV7OarGbPeve4Dr586NPpa_i-jehPw3OXyG4twBYw5xUEFpHhuhdA1XHogJtpgUgecl2yGIVjLd_8MW4Fj1WJPA269kyj_deHm6uyg6zw8arkQGDLdgT00nUpmd5xxD0qzIeib2sTINm0zOMH9sSynR_h5gBI2ZkvCyriy5h20eRVOI1gMBc26H3MmhpQjGfvX6m_2dfDiC5BTuoSBBdQmdZcdZ2HgxVa9cL1ID91GZlH5nj7xPtIS"/>
+              <img alt="LARP" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq5PjVd3OyVPNV7OarGbPeve4Dr586NPpa_i-jehPw3OXyG4twBYw5xUEFpHhuhdA1XHogJtpgUgecl2yGIVjLd_8MW4Fj1WJPA269kyj_deHm6uyg6zw8arkQGDLdgT00nUpmd5xxD0qzIeib2sTINm0zOMH9sSynR_h5gBI2ZkvCyriy5h20eRVOI1gMBc26H3MmhpQjGfvX6m_2dfDiC5BTuoSBBdQmdZcdZ2HgxVa9cL1ID91GZlH5nj7xPtIS"/>
             </div>
             <div class="flex flex-col">
               <span class="font-semibold text-sm text-on-surface tracking-wide">Los Angeles Roleplay</span>
               <span class="text-xs text-secondary/70">Gateway Portal</span>
             </div>
           </div>
-          <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-surface-container-high/80 text-secondary text-xs">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span class="text-[11px] font-medium text-on-surface">Secure Node</span>
-          </div>
         </div>
 
         <div class="flex flex-col items-center justify-center text-center pb-6">
-          <div id="icon-bg" class="w-20 h-20 rounded-2xl bg-surface-container-high flex items-center justify-center shadow-md mb-4 transition-colors duration-300">
-            <span id="dynamic-icon" class="material-symbols-outlined text-4xl text-white">link</span>
+          <div id="icon-bg" class="w-20 h-20 rounded-2xl bg-surface-container-high flex items-center justify-center shadow-md mb-4 transition-colors duration-300 overflow-hidden">
+            <!-- Replaced icon with dynamic image tag -->
+            <img id="dynamic-icon" class="w-full h-full object-cover hidden" src="" alt="Destination Logo" />
           </div>
           <h1 id="dynamic-title" class="text-xl font-bold tracking-tight text-on-surface mb-2">Establishing Connection</h1>
           <p id="dynamic-subtitle" class="font-body-md text-secondary text-sm max-w-sm">
@@ -67,64 +64,78 @@
         </div>
 
         <div class="flex flex-col space-y-2.5">
-          <a id="continue-btn" class="w-full bg-primary-container text-black py-3.5 px-6 rounded-xl font-semibold text-center text-sm flex items-center justify-center space-x-2 hover:brightness-105 active:scale-[0.99] transition-all cursor-pointer" href="#" rel="noopener noreferrer" target="_blank">
+          <a id="continue-btn" class="w-full bg-primary-container text-black py-3.5 px-6 rounded-xl font-semibold text-center text-sm flex items-center justify-center space-x-2 hover:brightness-105 active:scale-[0.99] transition-all cursor-pointer" href="#">
             <span id="btn-text">Proceed Manually</span>
             <span class="material-symbols-outlined text-base font-bold">arrow_forward</span>
           </a>
-          <button class="w-full py-2.5 rounded-xl font-medium text-xs text-secondary hover:text-on-surface transition-colors text-center cursor-pointer" onclick="window.history.back()">
+          <button class="w-full py-2.5 rounded-xl font-medium text-xs text-secondary hover:text-on-surface transition-colors text-center cursor-pointer" onclick="window.location.href='index.html'">
             Abort & Return to Index
           </button>
-        </div>
-
-        <div class="mt-6 pt-4 border-t border-surface-container-high/40 flex items-center justify-center space-x-2 text-xs text-secondary/70">
-          <span class="material-symbols-outlined text-sm text-emerald-400" style="font-variation-settings: 'FILL' 1;">verified</span>
-          <span>Verified destination • <span id="footnote-url" class="text-on-surface font-medium">...</span></span>
         </div>
       </div>
     </div>
 
     <script>
+      // Strict Whitelist - Completely eliminates URL injection and Open Redirects
+      const ROUTES = {
+        "whitelist": { url: "https://discord.gg/C9rw3w6sJ3", title: "Whitelist Application", type: "discord" },
+        "discord": { url: "https://discord.com/invite/losrpp", title: "Join Discord", type: "discord" },
+        "game": { url: "https://erlc.gg/join?code=losrpp", title: "Launch Server", type: "game" },
+        "cad-police": { url: "https://melonly.xyz/cad/7219465648114503680/panel/police", title: "Law Enforcement CAD", type: "cad" },
+        "cad-fire": { url: "https://melonly.xyz/cad/7219465648114503680/panel/fire", title: "Fire and Rescue CAD", type: "cad" },
+        "cad-civ": { url: "https://melonly.xyz/cad/7219465648114503680/panel/civ", title: "Civilian CAD", type: "cad" }
+      };
+
       document.addEventListener("DOMContentLoaded", () => {
         const params = new URLSearchParams(window.location.search);
-        const targetUrl = params.get('url') || 'https://discord.gg/C9rw3W6sJ3';
-        const title = params.get('title') || 'External Link';
-        const targetType = params.get('target') || 'link';
+        const routeId = params.get('id');
 
-        // Apply text fields
-        document.getElementById('dynamic-title').textContent = title.replace(/\+/g, ' ');
-        document.getElementById('target-url').textContent = targetUrl;
-        document.getElementById('footnote-url').textContent = targetUrl.replace(/^https?:\/\//, '');
-        document.getElementById('continue-btn').href = targetUrl;
+        // Security Check: If ID is tampered with or missing, redirect to home.
+        if (!routeId || !ROUTES[routeId]) {
+          window.location.replace('index.html');
+          return;
+        }
 
-        // Dynamic styling based on target payload
+        const route = ROUTES[routeId];
+
+        // Apply Hardcoded Text fields
+        document.getElementById('dynamic-title').textContent = route.title;
+        document.getElementById('target-url').textContent = route.url;
+        document.getElementById('continue-btn').href = route.url;
+
+        // Apply Dynamic Imagery based on type
         const iconBg = document.getElementById('icon-bg');
         const iconEl = document.getElementById('dynamic-icon');
         const subtitle = document.getElementById('dynamic-subtitle');
 
-        if (targetType === 'discord') {
-          iconBg.className = 'w-20 h-20 rounded-2xl bg-[#5865F2] flex items-center justify-center shadow-md mb-4';
-          iconEl.textContent = 'forum';
+        // Reveal the image tag
+        iconEl.classList.remove('hidden');
+
+        if (route.type === 'discord') {
+          iconEl.src = 'discord.png';
+          iconEl.className = 'w-full h-full object-cover';
           subtitle.textContent = 'You are being redirected to the official community Discord server.';
-        } else if (targetType === 'game') {
-          iconBg.className = 'w-20 h-20 rounded-2xl bg-primary-container flex items-center justify-center shadow-md mb-4';
-          iconEl.className = 'material-symbols-outlined text-4xl text-black';
-          iconEl.textContent = 'sports_esports';
+        } else if (route.type === 'game') {
+          // Add internal padding and change object fit so the badge isn't cut off
+          iconBg.className = 'w-20 h-20 rounded-2xl bg-surface-container-high flex items-center justify-center shadow-md mb-4 p-2';
+          iconEl.src = 'prc.png';
+          iconEl.className = 'w-full h-full object-contain';
           subtitle.textContent = 'Initializing connection to the main roleplay server via ERLC.';
-        } else if (targetType === 'cad') {
-          iconBg.className = 'w-20 h-20 rounded-2xl bg-red-600 flex items-center justify-center shadow-md mb-4';
-          iconEl.textContent = 'shield';
+        } else if (route.type === 'cad') {
+          iconEl.src = 'melonly.jpg';
+          iconEl.className = 'w-full h-full object-cover';
           subtitle.textContent = 'Accessing secure terminal dispatch protocols.';
         }
 
-        // Copy functionality
+        // Copy button script
         document.getElementById('copy-btn').onclick = function() {
-          navigator.clipboard.writeText(targetUrl);
+          navigator.clipboard.writeText(route.url);
           const tip = document.getElementById('copied-tip');
           tip.classList.remove('opacity-0');
           setTimeout(() => tip.classList.add('opacity-0'), 2000);
         };
 
-        // Automated countdown & redirect
+        // Countdown Timer & execution in the same tab
         let countdownSeconds = 5;
         const btnText = document.getElementById('btn-text');
         
@@ -133,7 +144,7 @@
           if(countdownSeconds <= 0) {
             clearInterval(interval);
             btnText.textContent = 'Connecting...';
-            window.location.href = targetUrl;
+            window.location.href = route.url; 
           } else {
             btnText.textContent = `Proceeding in ${countdownSeconds}s`;
           }
